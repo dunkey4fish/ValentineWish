@@ -109,6 +109,7 @@ const animationTimeline = () => {
       scale: 1.2,
       x: 10,
       backgroundColor: "rgb(21, 161, 237)",
+      transformOrigin: "right bottom",
       color: "#fff",
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=1.5")
@@ -145,29 +146,43 @@ const animationTimeline = () => {
       },
       "+=2"
     )
-    .staggerFrom(
-      ".idea-6 span",
-      0.8,
-      {
-        scale: 3,
-        opacity: 0,
-        rotation: 15,
-        ease: Expo.easeOut,
-      },
-      0.2
-    )
-    .staggerTo(
-      ".idea-6 span",
-      0.8,
-      {
-        scale: 3,
-        opacity: 0,
-        rotation: -15,
-        ease: Expo.easeOut,
-      },
-      0.2,
-      "+=1"
-    )
+
+    // .staggerFrom(
+    //   ".idea-6xxx span",
+    //   0.8,
+    //   {
+    //     scale: 3,
+    //     opacity: 0,
+    //     rotation: 15,
+    //     ease: Expo.easeOut,
+    //   },
+    //   0.2
+    // )
+    // .staggerTo(
+    //   ".idea-6xxx span",
+    //   0.8,
+    //   {
+    //     scale: 3,
+    //     opacity: 0,
+    //     rotation: -15,
+    //     ease: Expo.easeOut,
+    //   },
+    //   0.2,
+    //   "+=1"
+    // )
+
+    .from(".six-idea-1", 0.7, ideaTextTrans)
+    .to(".six-idea-1", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-2", 0.7, ideaTextTrans)
+    .to(".six-idea-2 strong", 0.8, {
+      scale: 1.2,
+      x: 10,
+      backgroundColor: "rgb(70, 226, 212)",
+    })
+    .to(".six-idea-2", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-3", 0.7, ideaTextTrans)
+    .to(".six-idea-3", 0.7, ideaTextTransLeave, "+=1.5")
+
     .staggerFromTo(
       ".baloons img",
       2.5,
