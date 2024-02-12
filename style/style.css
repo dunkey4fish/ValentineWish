@@ -17,6 +17,15 @@ body {
   overflow: hidden;
 }
 
+.time-passed-display {
+  font-size: 60px; /* 或者你想要的任何其他大小 */
+  /* 可以添加更多样式来美化显示，例如 */
+  color: #333; /* 文字颜色 */
+  font-weight: bold; /* 字体加粗 */
+  text-align: center; /* 文字居中显示 */
+  margin: 20px 0; /* 添加一些上下边距 */
+}
+
 .container div.six {
   top: 10vh;
   z-index: 1;

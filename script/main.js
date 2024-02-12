@@ -1,3 +1,28 @@
+function updateTimePassed() {
+  const startDate = new Date("2024-01-01T00:00:00");
+  const now = new Date();
+  const diff = now - startDate; // 时间差毫秒数
+
+  // 计算天、时、分、秒
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / 1000 / 60) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  // 更新页面元素显示时间
+  const displayElement = document.querySelector(".time-passed-display");
+  displayElement.textContent = `我们已经交往了${days}天${hours}小时${minutes}分钟${seconds}秒！`;
+}
+
+// 使用setInterval每秒调用updateTimePassed函数
+setInterval(updateTimePassed, 1000);
+
+function hideTimePassedDisplay() {
+  // 直接设置元素为非可见
+  const displayElement = document.querySelector(".time-passed-display");
+  displayElement.style.visibility = 'hidden';
+}
+
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -31,7 +56,7 @@ const animationTimeline = () => {
   tl.to(".container", 0.1, {
     visibility: "visible",
   })
-  
+
     .from(".one", 0.7, {
       opacity: 0,
       y: 10,
@@ -171,7 +196,6 @@ const animationTimeline = () => {
     //   0.2,
     //   "+=1"
     // )
-
     .from(".six-idea-1", 0.7, ideaTextTrans)
     .to(".six-idea-1", 0.7, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-2", 0.7, ideaTextTrans)
@@ -180,19 +204,69 @@ const animationTimeline = () => {
       x: 10,
       backgroundColor: "rgb(70, 226, 212)",
     })
-    .to(".six-idea-2", 0.7, ideaTextTransLeave, "+=1.5")
-    .from(".six-idea-3", 0.7, ideaTextTrans)
-    .to(".six-idea-3", 0.7, ideaTextTransLeave, "+=1.5")
-    .from(".six-idea-4", 0.7, ideaTextTrans)
-    .to(".six-idea-4", 0.7, ideaTextTransLeave, "+=1.5")
-    .from(".six-idea-5", 0.7, ideaTextTrans)
-    .to(".six-idea-5", 0.7, ideaTextTransLeave, "+=1.5")
-    .from(".six-idea-6", 0.7, ideaTextTrans)
-    .to(".six-idea-6", 0.7, ideaTextTransLeave, "+=1.5")
-    .from(".six-idea-7", 0.7, ideaTextTrans)
-    .to(".six-idea-7", 0.7, ideaTextTransLeave, "+=1.5")
-    .from(".six-idea-8", 0.7, ideaTextTrans)
-    .to(".six-idea-8", 0.7, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-2", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-3", 1.5, ideaTextTrans)
+    .to(".six-idea-3", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-4", 1.5, ideaTextTrans)
+    .to(".six-idea-4", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-5", 1.5, ideaTextTrans)
+    .to(".six-idea-5", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-6", 1.5, ideaTextTrans)
+    .to(".six-idea-6", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-7", 1.5, ideaTextTrans)
+    .to(".six-idea-7", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-8", 1.5, ideaTextTrans)
+    .to(".six-idea-8", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-9", 1.5, ideaTextTrans)
+    .to(".six-idea-9", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-10", 1.5, ideaTextTrans)
+    .to(".six-idea-10", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-11", 1.5, ideaTextTrans)
+    .to(".six-idea-11", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-12", 1.5, ideaTextTrans)
+    .to(".six-idea-12", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-13", 3, ideaTextTrans)
+    .fromTo(".six-idea-13 strong", 2, {
+      autoAlpha: 0, // GSAP的autoAlpha会同时管理透明度和可见性，设置为0使元素不可见
+      scale: 1.2,
+      x: 10,
+    }, {
+      autoAlpha: 1, // 动画目标是使元素变得可见
+      scale: 1.2,
+      x: 10,
+    })
+    .to(".six-idea-13", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".time-passed-display", 2, ideaTextTrans)
+    .to(".time-passed-display", 2, ideaTextTransLeave, "+=3")
+    // .call(updateTimePassed) // 更新时间统计一次
+    // .set({}, {}, "+=5") // 等待3秒
+    // .call(hideTimePassedDisplay) // 调用函数来隐藏时间显示
+    .from(".six-idea-14", 1.5, ideaTextTrans)
+    .fromTo(".six-idea-14 strong", 2, {
+      autoAlpha: 0, // GSAP的autoAlpha会同时管理透明度和可见性，设置为0使元素不可见
+      scale: 1.2,
+      x: 10,
+    }, {
+      autoAlpha: 1, // 动画目标是使元素变得可见
+      scale: 1.2,
+      x: 10,
+    })
+    .to(".six-idea-14", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-15", 1.5, ideaTextTrans)
+    .fromTo(".six-idea-15 strong", 2, {
+      autoAlpha: 0, // GSAP的autoAlpha会同时管理透明度和可见性，设置为0使元素不可见
+      scale: 1.2,
+      x: 10,
+    }, {
+      autoAlpha: 1, // 动画目标是使元素变得可见
+      scale: 1.2,
+      x: 10,
+    })
+    .to(".six-idea-15", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-16", 1.5, ideaTextTrans)
+    .to(".six-idea-16", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-17", 1.5, ideaTextTrans)
+    .to(".six-idea-17", 1.5, ideaTextTransLeave, "+=1.5")
 
     .staggerFromTo(
       ".baloons img",
@@ -280,16 +354,16 @@ const animationTimeline = () => {
       opacity: 0,
       y: 30,
       zIndex: "-1",
-    })
-    .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
-    .to(
-      ".last-smile",
-      0.5,
-      {
-        rotation: 90,
-      },
-      "+=1"
-    );
+    });
+    // .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
+    // .to(
+    //   ".last-smile",
+    //   0.5,
+    //   {
+    //     rotation: 90,
+    //   },
+    //   "+=1"
+    // );
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
