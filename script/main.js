@@ -31,6 +31,7 @@ const animationTimeline = () => {
   tl.to(".container", 0.1, {
     visibility: "visible",
   })
+  
     .from(".one", 0.7, {
       opacity: 0,
       y: 10,
@@ -182,6 +183,16 @@ const animationTimeline = () => {
     .to(".six-idea-2", 0.7, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-3", 0.7, ideaTextTrans)
     .to(".six-idea-3", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-4", 0.7, ideaTextTrans)
+    .to(".six-idea-4", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-5", 0.7, ideaTextTrans)
+    .to(".six-idea-5", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-6", 0.7, ideaTextTrans)
+    .to(".six-idea-6", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-7", 0.7, ideaTextTrans)
+    .to(".six-idea-7", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-8", 0.7, ideaTextTrans)
+    .to(".six-idea-8", 0.7, ideaTextTransLeave, "+=1.5")
 
     .staggerFromTo(
       ".baloons img",

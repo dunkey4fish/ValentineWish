@@ -9,7 +9,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vh;
+  width: 200vh;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
@@ -86,7 +86,7 @@ body {
 }
 
 .five p, .new-six p {
-  font-size: 2rem;
+  font-size: 3rem;
   position: absolute;
   left: 0;
   right: 0;
