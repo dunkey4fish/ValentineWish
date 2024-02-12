@@ -206,21 +206,21 @@ const animationTimeline = () => {
     })
     .to(".six-idea-2", 1.5, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-3", 1.5, ideaTextTrans)
-    .to(".six-idea-3", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-3", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-4", 1.5, ideaTextTrans)
-    .to(".six-idea-4", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-4", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-5", 1.5, ideaTextTrans)
-    .to(".six-idea-5", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-5", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-6", 1.5, ideaTextTrans)
-    .to(".six-idea-6", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-6", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-7", 1.5, ideaTextTrans)
-    .to(".six-idea-7", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-7", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-8", 1.5, ideaTextTrans)
-    .to(".six-idea-8", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-8", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-9", 1.5, ideaTextTrans)
-    .to(".six-idea-9", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-9", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-10", 1.5, ideaTextTrans)
-    .to(".six-idea-10", 1.5, ideaTextTransLeave, "+=1.5")
+    .to(".six-idea-10", 1, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-11", 1.5, ideaTextTrans)
     .to(".six-idea-11", 1.5, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-12", 1.5, ideaTextTrans)
@@ -354,16 +354,16 @@ const animationTimeline = () => {
       opacity: 0,
       y: 30,
       zIndex: "-1",
-    });
-    // .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
-    // .to(
-    //   ".last-smile",
-    //   0.5,
-    //   {
-    //     rotation: 90,
-    //   },
-    //   "+=1"
-    // );
+    })
+    .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
+    .to(
+      ".last-smile",
+      0.5,
+      {
+        rotation: 90,
+      },
+      "+=1"
+    );
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
