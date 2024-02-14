@@ -196,6 +196,15 @@ const animationTimeline = () => {
     //   0.2,
     //   "+=1"
     // )
+    .from(".six-idea-0-1", 1, ideaTextTrans)
+    .to(".six-idea-0-1 strong", 0.8, {
+      scale: 1.2,
+      x: 10,
+      backgroundColor: "rgb(21, 161, 237)",
+    })
+    .to(".six-idea-0-1", 1, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-0-2", 1.5, ideaTextTrans)
+    .to(".six-idea-0-2", 1.5, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-1", 0.7, ideaTextTrans)
     .to(".six-idea-1", 0.7, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-2", 0.7, ideaTextTrans)
@@ -225,6 +234,10 @@ const animationTimeline = () => {
     .to(".six-idea-11", 1.5, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-12", 1.5, ideaTextTrans)
     .to(".six-idea-12", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-12-1", 1.5, ideaTextTrans)
+    .to(".six-idea-12-1", 1.5, ideaTextTransLeave, "+=1.5")
+    .from(".six-idea-12-2", 1.5, ideaTextTrans)
+    .to(".six-idea-12-2", 1.5, ideaTextTransLeave, "+=1.5")
     .from(".six-idea-13", 3, ideaTextTrans)
     .fromTo(".six-idea-13 strong", 2, {
       autoAlpha: 0, // GSAP的autoAlpha会同时管理透明度和可见性，设置为0使元素不可见

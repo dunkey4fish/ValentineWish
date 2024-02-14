@@ -113,6 +113,12 @@ body {
   display: inline-block;
 }
 
+.six-idea-0-1 strong {
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
 .five .idea-5 {
   font-size: 4rem;
 }
